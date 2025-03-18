@@ -50,6 +50,7 @@ resource "azurerm_virtual_machine" "main" {
     }
 
     inline = [
+      "sudo add-apt-repository ppa:nginx/stable",
       "sudo apt-get update -y",
       "sudo apt-get install -y nginx",
       "sudo systemctl enable nginx",
